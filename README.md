@@ -9,14 +9,14 @@ pip install -r requirements.txt
 playwright install
 
 Запусти тесты
-# Все тесты с подробным выводом
+Все тесты с подробным выводом
 pytest tests/ -v
-# Тесты с HTML отчетом
+Тесты с HTML отчетом
 pytest tests/ -v --html=report.html
-# Тесты с Allure отчетом
+Тесты с Allure отчетом
 pytest tests/ -v --alluredir=allure-results
 
 Просмотр отчетов
-# HTML отчет - открой файл report.html в браузере
-# Allure отчет
+HTML отчет - открой файл report.html в браузере
+Allure отчет
 allure serve allure-results
