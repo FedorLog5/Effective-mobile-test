@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  tests:
+    build: .
+    container_name: effective-mobile-tests
+    volumes:
+      - ./allure-results:/app/allure-results
+      - ./screenshots:/app/screenshots
+    environment:
+      - HEADLESS=true
+      - SLOW_MO=0
+    networks:
+      - test-network
+
+  allure:
+    image: frankescobar/allure-docker-service
+    container_name: allure-report
+    environment:
+      - CHECK_RESULTS_EVERY_SECONDS=5
+      - KEEP_HISTORY=10
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./allure-results:/app/allure-results
+    depends_on:
+      - tests
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge
