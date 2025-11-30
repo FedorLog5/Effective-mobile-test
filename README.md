@@ -2,7 +2,7 @@
 git clone https://github.com/yourusername/effective-mobile-test.git
 cd effective-mobile-test
 
-Установи зависимости\n
+Установи зависимости
 pip install -r requirements.txt
 
 Установи браузеры Playwright
