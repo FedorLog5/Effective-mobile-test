@@ -1,4 +1,4 @@
-1.** Клонируй репозиторий**
+Клонируй репозиторий
 git clone https://github.com/yourusername/effective-mobile-test.git
 cd effective-mobile-test
 
